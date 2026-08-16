@@ -25,10 +25,15 @@ depois:return leitura * 9 / 5 + 32;
 
 ## M3 - O segredo vazado
 
-**O que voce esperava ver no `git status` e o que apareceu:**
+**O que voce esperava ver no `git status` e o que apareceu:
+esperava que o .gitignore resolvesse, mas o arquivo continua rastreado normalmente
 
 **Depois do push, alguem que clonar o repositorio ainda consegue ler a chave?
-Responda em duas linhas, explicando o motivo:**
+Responda em duas linhas, explicando o motivo:
+sim, alguém que clonar o repositório ainda consegue ler a chave. O git rm --cached
+só impede que o arquivo apareça nos commits futuros, mas ele continua existindo
+no histórico de commits antigos, acessível por qualquer pessoa que rodar
+"git log" e "git show" nesses commits.
 
 ---
 
